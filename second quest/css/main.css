@@ -1,0 +1,122 @@
+html {
+    background-color: #0f1113;
+}
+body{
+    margin: 0px;
+}
+.root {
+    display: flex;
+}
+
+.main-block {
+    background-color: rgb(247, 247, 247);
+    color: rgb(56, 61, 67);
+    flex: 3 1 0;
+}
+
+.main-block-item {
+    border-bottom: 2px solid rgb(19, 19, 20);
+    padding: 3em;
+    font-size: 1.5em;
+}
+
+.main-block-item header {
+    font-size: 2em;
+    font-family: "OpenSans-Bold";
+    font-weight: bold;
+}
+
+.left-menu {
+    line-height: 2em;
+    font-size: 1.5em;
+    color: white;
+    flex: 1 1 0;
+}
+
+.left-menu nav {
+    background-color: rgb(31, 34, 41);
+}
+
+.left-menu-list {
+    padding: 2em;
+    list-style-type: none;
+    margin: 0px;
+}
+
+a:hover,
+a:visited,
+a {
+    color: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+}
+
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em 1.5em;
+}
+
+.menu-icon span {
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid #e3e9ed;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* desctop/laptop */
+
+@media (min-width: 1025px) {
+    .menu-icon{
+        display: none;
+    }
+}
+
+
+/* tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .left-menu-item-text {
+        display: none;
+    }
+    .left-menu {
+        flex: 0 0 auto;
+    }
+    .left-menu-list{
+        margin: 0px;
+    }
+    nav.text-show .left-menu-item-text{
+        display: inline-block;
+    }
+    .left-menu nav.text-show{
+        position: absolute;
+    }
+}
+
+
+/* mobile */
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .left-menu{
+        position: fixed;
+    }
+
+    .left-menu nav{
+        display: none;
+    }
+    .menu-icon{
+        justify-content: left;
+        padding: 10px;
+        
+    }
+    .menu-icon span{
+        background-color:rgb(31, 34, 41);
+    }
+    .left-menu nav.text-show{
+        display: block;
+    }
+
+}
